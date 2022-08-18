@@ -112,9 +112,9 @@ function onfileChange(event) {
   };
 }
 function onDoubleClick(event) {
-  ctx.save(); //ctx의 현재 상태, 색상, 스타일 등 모든 것을 저장함. "즉 현재상태를 저장함"
   const text = textInput.value;
-  if (test === !"") {
+  if (text !== "") {
+    ctx.save(); //ctx의 현재 상태, 색상, 스타일 등 모든 것을 저장함. "즉 현재상태를 저장함"
     ctx.lineWidth = 1;
     ctx.font = "68px serif"; //size, family
     ctx.fillText(text, event.offsetX, event.offsetY);
